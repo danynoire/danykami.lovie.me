@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DanyKami — Portfólio</title>
+  <meta name="description" content="Portfólio pessoal de DanyKami — projetos, criatividade, tecnologia e desenvolvimento.">
+  <style>
+    :root{
+      --bg:#08080d;
+      --bg2:#101018;
+      --card:rgba(255,255,255,.055);
+      --line:rgba(255,255,255,.10);
+      --text:#f7f7fb;
+      --muted:#aaaab8;
+      --accent:#b98cff;
+      --accent2:#7c5cff;
+      --shadow:0 20px 70px rgba(0,0,0,.45);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter,Segoe UI,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 15% 10%,rgba(124,92,255,.20),transparent 30%),
+        radial-gradient(circle at 85% 20%,rgba(185,140,255,.13),transparent 28%),
+        var(--bg);
+      min-height:100vh;
+      line-height:1.6;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1120px,92%);margin:auto}
+    nav{
+      position:fixed;top:0;left:0;right:0;z-index:20;
+      backdrop-filter:blur(18px);
+      background:rgba(8,8,13,.68);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{
+      height:70px;display:flex;align-items:center;justify-content:space-between;
+    }
+    .logo{font-size:1.15rem;font-weight:800;letter-spacing:.5px}
+    .logo span{color:var(--accent)}
+    .links{display:flex;gap:26px;color:var(--muted);font-size:.94rem}
+    .links a:hover{color:#fff}
+    .hero{
+      min-height:100vh;display:grid;place-items:center;
+      padding:120px 0 70px;
+    }
+    .hero-content{text-align:center;max-width:850px}
+    .badge{
+      display:inline-flex;padding:7px 13px;border:1px solid var(--line);
+      background:var(--card);border-radius:999px;color:#d7d0ff;font-size:.85rem;
+      margin-bottom:24px;
+    }
+    h1{
+      font-size:clamp(3.2rem,9vw,7.5rem);
+      line-height:.95;letter-spacing:-.07em;
+      background:linear-gradient(135deg,#fff 15%,#cbb5ff 55%,#8b6cff);
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+    }
+    .hero p{
+      max-width:680px;margin:26px auto 0;color:var(--muted);
+      font-size:1.1rem;
+    }
+    .buttons{display:flex;justify-content:center;gap:12px;margin-top:30px;flex-wrap:wrap}
+    .btn{
+      padding:12px 19px;border-radius:12px;border:1px solid var(--line);
+      background:var(--card);transition:.2s;font-weight:600;
+    }
+    .btn.primary{
+      background:linear-gradient(135deg,var(--accent2),var(--accent));
+      border:none;color:#fff;
+    }
+    .btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(124,92,255,.2)}
+    section{padding:90px 0}
+    .section-title{font-size:2rem;margin-bottom:10px;letter-spacing:-.03em}
+    .section-sub{color:var(--muted);max-width:680px;margin-bottom:35px}
+    .about{
+      display:grid;grid-template-columns:1fr 1fr;gap:22px;
+    }
+    .card{
+      border:1px solid var(--line);background:var(--card);
+      border-radius:22px;padding:28px;box-shadow:var(--shadow);
+    }
+    .card h3{margin-bottom:10px}
+    .card p{color:var(--muted)}
+    .projects{
+      display:grid;grid-template-columns:repeat(2,1fr);gap:18px;
+    }
+    .project{
+      min-height:190px;position:relative;overflow:hidden;
+      transition:.25s;
+    }
+    .project:hover{transform:translateY(-5px);border-color:rgba(185,140,255,.35)}
+    .number{color:var(--accent);font-weight:800;font-size:.82rem}
+    .project h3{font-size:1.3rem;margin:10px 0 7px}
+    .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:17px}
+    .tag{
+      font-size:.76rem;color:#d0ccd9;padding:5px 9px;
+      border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.035)
+    }
+    .skills{display:flex;flex-wrap:wrap;gap:10px}
+    .skill{
+      padding:10px 14px;border:1px solid var(--line);border-radius:12px;
+      background:var(--card);color:#ddd;
+    }
+    .contact{text-align:center}
+    .contact .card{max-width:760px;margin:auto}
+    footer{
+      border-top:1px solid var(--line);padding:28px 0;
+      color:#777783;text-align:center;font-size:.86rem;
+    }
+    @media(max-width:700px){
+      .links{display:none}
+      .about,.projects{grid-template-columns:1fr}
+      .hero{padding-top:110px}
+      section{padding:65px 0}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a class="logo" href="#inicio">Dany<span>Kami</span></a>
+    <div class="links">
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="container hero-content">
+      <div class="badge">✦ Portfólio pessoal</div>
+      <h1>DanyKami</h1>
+      <p>
+        Criatividade, tecnologia e desenvolvimento reunidos em projetos digitais,
+        experiências para comunidades e ideias transformadas em realidade.
+      </p>
+      <div class="buttons">
+        <a class="btn primary" href="#projetos">Ver projetos</a>
+        <a class="btn" href="#sobre">Conhecer mais</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <div class="container">
+      <h2 class="section-title">Sobre mim</h2>
+      <p class="section-sub">
+        Um pouco do que faço e das áreas em que gosto de criar.
+      </p>
+      <div class="about">
+        <div class="card">
+          <h3>Quem sou</h3>
+          <p>
+            Sou DanyKami, uma pessoa apaixonada por tecnologia, criatividade,
+            comunidades online e criação de experiências digitais. Gosto de
+            transformar ideias em projetos funcionais e visualmente marcantes.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Meu jeito de criar</h3>
+          <p>
+            Exploro diferentes ferramentas, linguagens e plataformas para
+            construir sites, sistemas, bots, automações, experiências de RP
+            e outras soluções digitais.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projetos">
+    <div class="container">
+      <h2 class="section-title">O que eu já criei</h2>
+      <p class="section-sub">
+        Alguns dos tipos de projetos que fazem parte da minha trajetória —
+        apresentados sem expor nomes específicos.
+      </p>
+
+      <div class="projects">
+        <article class="card project">
+          <span class="number">01</span>
+          <h3>Sites e páginas web</h3>
+          <p>Criação de sites completos, páginas institucionais, portfólios e interfaces personalizadas.</p>
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Web</span></div>
+        </article>
+
+        <article class="card project">
+          <span class="number">02</span>
+          <h3>Sistemas escolares</h3>
+          <p>Ideias de plataformas para organizar alunos, professores, turmas, notas, presença, documentos e permissões.</p>
+          <div class="tags"><span class="tag">Sistemas</span><span class="tag">RBAC</span><span class="tag">Banco de dados</span></div>
+        </article>
+
+        <article class="card project">
+          <span class="number">03</span>
+          <h3>Bots para Discord</h3>
+          <p>Bots com comandos, automações, cargos, tickets, mensagens, configurações de servidores e integrações.</p>
+          <div class="tags"><span class="tag">Discord</span><span class="tag">Bots</span><span class="tag">Automação</span></div>
+        </article>
+
+        <article class="card project">
+          <span class="number">04</span>
+          <h3>Inteligência artificial</h3>
+          <p>Projetos envolvendo IA, assistentes, geração de conteúdo, automação e integração com APIs.</p>
+          <div class="tags"><span class="tag">IA</span><span class="tag">APIs</span><span class="tag">Automação</span></div>
+        </article>
+
+        <article class="card project">
+          <span class="number">05</span>
+          <h3>Projetos para comunidades</h3>
+          <p>Estruturas digitais para comunidades online, organização de servidores, sistemas e experiências interativas.</p>
+          <div class="tags"><span class="tag">Comunidades</span><span class="tag">Discord</span><span class="tag">RP</span></div>
+        </article>
+
+        <article class="card project">
+          <span class="number">06</span>
+          <h3>Experiências de Roleplay</h3>
+          <p>Criação e organização de universos de RP, escolas, cidades, regras, eventos, personagens e conteúdos.</p>
+          <div class="tags"><span class="tag">Roleplay</span><span class="tag">Eventos</span><span class="tag">Worldbuilding</span></div>
+        </article>
+
+        <article class="card project">
+          <span class="number">07</span>
+          <h3>Ferramentas e automações</h3>
+          <p>Ideias e soluções para reduzir tarefas repetitivas e conectar diferentes partes de projetos digitais.</p>
+          <div class="tags"><span class="tag">Automação</span><span class="tag">Integrações</span><span class="tag">Ferramentas</span></div>
+        </article>
+
+        <article class="card project">
+          <span class="number">08</span>
+          <h3>Projetos criativos</h3>
+          <p>Identidade visual, textos, layouts, conceitos, experiências e materiais digitais feitos sob medida.</p>
+          <div class="tags"><span class="tag">Design</span><span class="tag">Criatividade</span><span class="tag">Conteúdo</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="habilidades">
+    <div class="container">
+      <h2 class="section-title">Habilidades & interesses</h2>
+      <p class="section-sub">Tecnologias e áreas que fazem parte dos meus projetos.</p>
+      <div class="skills">
+        <span class="skill">HTML & CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">Discord</span>
+        <span class="skill">Bots</span>
+        <span class="skill">Inteligência Artificial</span>
+        <span class="skill">APIs</span>
+        <span class="skill">Automação</span>
+        <span class="skill">Web Design</span>
+        <span class="skill">Sistemas</span>
+        <span class="skill">Roleplay</span>
+        <span class="skill">Comunidades</span>
+        <span class="skill">Criação de conteúdo</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="contact">
+    <div class="container">
+      <div class="card">
+        <h2 class="section-title">Vamos criar algo?</h2>
+        <p class="section-sub" style="margin:12px auto 0">
+          Este espaço pode ser usado para colocar suas redes sociais,
+          GitHub, Discord ou qualquer outra forma de contato.
+        </p>
+        <div class="buttons">
+          <a class="btn primary" href="#inicio">Voltar ao início</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2026 DanyKami · Feito com criatividade.
+</footer>
+
+</body>
+</html>
